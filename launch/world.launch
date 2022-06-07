@@ -7,9 +7,9 @@
   </node>
 
   <!-- map of the iai kitchen  -->
-  <include file="$(find urobosim_ros_config)/launch/environment.launch" />
+  <include file="$(find avatar_ros_config)/launch/environment.launch" />
 
   <!-- robot -->
-  <include file="$(find urobosim_ros_config)/launch/avatar.launch" />
+  <include file="$(find avatar_ros_config)/launch/avatar.launch" />
 
 </launch>
