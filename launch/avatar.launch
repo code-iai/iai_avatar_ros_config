@@ -1,0 +1,13 @@
+<launch>
+  <include file="$(find iai_avatar_description)/launch/display.launch" />
+
+  <rosparam command="load" file="$(find avatar_ros_config)/config/ros_control_sim.yaml" />
+
+  <node pkg="robot_state_publisher" type="robot_state_publisher"
+    name="pr2_state_publisher" output="screen">
+    <param name="publish_frequency" value="25"/>
+    <param name="ignore_timestamp" value="true"/>
+    /* <param name="use_tf_static" value="False"/> */
+  </node>
+
+</launch>

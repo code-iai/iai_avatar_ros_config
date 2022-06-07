@@ -1,0 +1,14 @@
+hardware_interface:
+  sim_control_mode: 0
+  joints:
+    pelvis_to_thigh_l
+generic_hw_control_loop:
+  loop_hz: &loop_rate 100
+  cycle_time_error_threshold: 0.015
+joint_state_controller:
+  type: joint_state_controller/JointStateController
+  publish_rate: *loop_rate
+whole_body_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    pelvis_to_thigh_l
