@@ -2,7 +2,7 @@
 <package >
   <name>avatar_ros_config</name>
   <version>0.0.0</version>
-  <description>The urobosim_ros_config package</description>
+  <description>The avatar_ros_config package</description>
 
   <maintainer email="abdelker@uni-bremen.de">abdelker</maintainer>
 
