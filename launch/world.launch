@@ -1,11 +1,19 @@
 <launch>   
+<<<<<<< HEAD
 
+=======
+>>>>>>> be4a7634e5f158bc493896a5522bc76eafa6134f
   <param name="giskard/robot_description" command="$(find xacro)/xacro '$(find iai_avatar_description)/MetaHuman/pia/urdf/avatar_pia.urdf'" /> 
  
   <node pkg="iai_naive_kinematics_sim" type="map_odom_transform_publisher.py" name="map_odom_transform_publisher" output="screen"> 
     <param name="parent_frame" value="map"/> 
     <param name="child_frame" value="root"/> 
   </node> 
+<<<<<<< HEAD
+=======
+  
+  
+>>>>>>> be4a7634e5f158bc493896a5522bc76eafa6134f
  
   <rosparam command="load" file="$(find avatar_ros_config)/config/ros_control_sim.yaml" />
  
