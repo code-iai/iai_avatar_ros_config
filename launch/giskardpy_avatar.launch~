@@ -1,0 +1,17 @@
+<launch>
+    <include file="$(find iai_avatar_description)/launch/avatar.launch"/>
+    
+    <node pkg="giskardpy" type="giskard_trees.py" name="giskard" output="screen">
+        <param name="config" value="$(find iai_avatar_ros_config)/config/avatar.yaml"/>
+        <remap from="/joint_states" to="/avatar/joint_states"/>
+    </node>
+    
+    <node pkg="joint_state_publisher" type="joint_state_publisher"
+          name="kitchen_joint_state_publisher" output="screen">
+        <param name="rate" value="25"/>
+        <remap from="/joint_states" to="/avatar/joint_states"/>
+        <rosparam param="source_list">
+            - /joint_states
+        </rosparam>
+    </node>
+</launch>
